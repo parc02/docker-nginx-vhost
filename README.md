@@ -18,6 +18,8 @@ $ docker run -itd -p 8002:80 --name serv-a nginx
 $ docker run -itd -p 8003:80 --name serv-a nginx
 $ docker run -itd -p 8001:80 --name lb nginx:latest
 ```
+FYI
+![image](https://github.com/parc02/docker-nginx-vhost/assets/148880521/7e817524-654c-4ead-aa3f-a4534d7bdc47)
 
 ### Step 3
 - copy local default.conf into (lb) docker container -> lb:/etc/nginx/conf.d
@@ -43,6 +45,7 @@ $tree
     └── index.html
 ```
 
+<<<<<<< HEAD
 ### Step 5
 - install ping in container(docker)
 ```
@@ -50,3 +53,6 @@ $ apt update
 $apt install iputils-ping
 $apt install telnet
 ```
+=======
+
+>>>>>>> 2325a50966edf553b01270206712f5d80e3b3681
