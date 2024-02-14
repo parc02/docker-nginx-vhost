@@ -6,7 +6,7 @@
 $ sudo docker rm (container id)
 $ sudo docker rmi (image id)
 --------------------------------------------------------------------------------
-<result>
+<results>
 $ sudo docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 $ sudo docker ps -a
@@ -20,3 +20,49 @@ $ docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 FYI
 ![image](https://github.com/parc02/docker-nginx-vhost/assets/148880521/7e817524-654c-4ead-aa3f-a4534d7bdc47)
+
+### Step 3
+- copy local default.conf into (lb) docker container -> lb:/etc/nginx/conf.d
+```
+sudo docker cp default.conf lb:/etc/nginx/conf.d
+```
+- move local default.config to lb folder and make serv-a, serv-b folder
+
+### Step 4
+- make index.html file to serv-a serv-b folder & copy to docker container
+```
+$sudo docker cp serv-a/index.html serv-a:/usr/share/nginx/html
+$sudo docker cp serv-b/index.html serv-b:/usr/share/nginx/html
+$tree
+.
+├── README.md
+├── lb
+│   └── config
+│       └── default.conf
+├── serv-a
+│   └── index.html
+└── serv-b
+    └── index.html
+```
+
+<<<<<<< HEAD
+### Step 5
+- install ping in container(docker)
+```
+$ apt update
+$apt install iputils-ping
+$apt install telnet
+```
+=======
+
+>>>>>>> 2325a50966edf553b01270206712f5d80e3b3681
+
+### Step 6
+```
+$sudo docker network ls
+
+NETWORK ID     NAME      DRIVER    SCOPE
+438ec9964d9e   bridge    bridge    local
+a5597bd84d88   host      host      local
+ed1a5e80b850   none      null      local
+```
