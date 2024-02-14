@@ -42,3 +42,11 @@ $tree
 └── serv-b
     └── index.html
 ```
+
+### Step 5
+- install ping in container(docker)
+```
+$ apt update
+$apt install iputils-ping
+$apt install telnet
+```
