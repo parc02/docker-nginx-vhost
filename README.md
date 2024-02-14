@@ -31,4 +31,14 @@ sudo docker cp default.conf lb:/etc/nginx/conf.d
 ```
 $sudo docker cp serv-a/index.html serv-a:/usr/share/nginx/html
 $sudo docker cp serv-b/index.html serv-b:/usr/share/nginx/html
+$tree
+.
+├── README.md
+├── lb
+│   └── config
+│       └── default.conf
+├── serv-a
+│   └── index.html
+└── serv-b
+    └── index.html
 ```
