@@ -56,3 +56,13 @@ $apt install telnet
 =======
 
 >>>>>>> 2325a50966edf553b01270206712f5d80e3b3681
+
+### Step 6
+```
+$sudo docker network ls
+
+NETWORK ID     NAME      DRIVER    SCOPE
+438ec9964d9e   bridge    bridge    local
+a5597bd84d88   host      host      local
+ed1a5e80b850   none      null      local
+```
