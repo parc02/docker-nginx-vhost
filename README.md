@@ -18,3 +18,9 @@ $ docker run -itd -p 8002:80 --name serv-a nginx
 $ docker run -itd -p 8003:80 --name serv-a nginx
 $ docker run -itd -p 8001:80 --name lb nginx:latest
 ```
+
+### Step 3
+- copy local default.conf into docker container -> lb:/etc/nginx/conf.d
+```
+sudo docker cp default.conf lb:/etc/nginx/conf.d
+```
