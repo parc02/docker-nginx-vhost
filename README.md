@@ -6,7 +6,7 @@
 $ sudo docker rm (container id)
 $ sudo docker rmi (image id)
 --------------------------------------------------------------------------------
-<result>
+<results>
 $ sudo docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 $ sudo docker ps -a
