@@ -20,7 +20,15 @@ $ docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 
 ### Step 3
-- copy local default.conf into docker container -> lb:/etc/nginx/conf.d
+- copy local default.conf into (lb) docker container -> lb:/etc/nginx/conf.d
 ```
 sudo docker cp default.conf lb:/etc/nginx/conf.d
+```
+- move local default.config to lb folder and make serv-a, serv-b folder
+
+### Step 4
+- make index.html file to serv-a serv-b folder & copy to docker container
+```
+$sudo docker cp serv-a/index.html serv-a:/usr/share/nginx/html
+$sudo docker cp serv-b/index.html serv-b:/usr/share/nginx/html
 ```
